@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SAit</title>
+        <link rel="stylesheet" href="assets/css/css.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    </head>
+<body>
+    <section>
+        <div class="circle" style="background-color: #3336;">
+        </div>
+        <header class="header">
+          
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul  class="navigation list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html/#portfolio">Portfolio</a></li>
+                <li><a href="index.html/#contact">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2 id='change'>Site Catalog<br></h2>
+        
+               
+                <p style="font-size: 18px;"  >This type of sites is primarily intended for convenient presentation of a large amount of information, designed in the form of a catalog of goods. The product catalog on such a website is usually more elaborate and detailed compared to a similar catalog that may be located on a corporate website. The Internet directory necessarily has a site search. As for the rest of the content, in general, such a site is not much different from a corporate site, i.e. there may also be news, articles, etc. sections. The design of such a site, as in the case of a corporate site, is focused on business and potential customers - rigor and neutrality, nothing more</p>
+                
+                <a href="index.html/#contact">Drop me a line</a>
+            </div>
+                <div class="imgBox">
+                    <img src="assets/images/img1.png" class="starbucks">
+                </div>
+         </div>
+         
+     <ul class="thumb">
+         <li><a href="Service1.html"><img src="assets/images/thumb1.png" onclick=" changeCircleColor('#3085a3'); "></a></li>
+         <li><a href="Service.html"><img src="assets/images/thumb3.png" onclick=" changeCircleColor('#017143'); "></a></li>
+         <li><img src="assets/images/thumb2.png" onclick=" changeCircleColor('#3336')"></li>
+     </ul>
+     <ul class="sci">
+         <li><a href=""><img src="assets/images/facebook.png"></a></li>
+         <li><a href=""><img src="assets/images/instagram.png"></a></li>
+         
+     </ul>
+    </section>
+
+ 
+
+    <script type="text/javascript">
+function imgSlider(anything){
+    document.querySelector('.starbucks').src = anything;
+
+}
+function changeCircleColor(color){
+    const circle = document.querySelector('.circle');
+    circle.style.background = color;
+}
+function toggleMenu(){
+    var menuToggle = document.querySelector('.toggle');
+    var navigation = document.querySelector('.navigation');
+    menuToggle.classList.toggle('active');
+    navigation.classList.toggle('active');
+
+}
+
+    
+    </script>
+   
+</body>
+</html>

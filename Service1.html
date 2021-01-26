@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SAit</title>
+        <link rel="stylesheet" href="assets/css/css.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    </head>
+<body>
+    <section>
+        <div class="circle" style="background-color: #3085a3;">
+        </div>
+        <header class="header">
+          
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul  class="navigation list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html/#portfolio">Portfolio</a></li>
+                <li><a href="index.html/#contact">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2 id='change'>Personal Site<br></h2>
+        
+               
+                <p style="font-size: 18px;"  >A personal site is essentially the same business card site, the main difference is that such websites are usually developed for individuals who want to provide some information about themselves or their hobbies, i.e. such a site is not focused on business and, as a result, not on potential customers. The design of a personal site can be anything, in the sense that it is not necessary to adhere to some business neutrality, i.e. the design of such a site can be quite bright and unusual.</p>
+                
+                <a href="index.html/#contact">Drop me a line</a>
+            </div>
+                <div class="imgBox">
+                    <img src="assets/images/img1.png" class="starbucks">
+                </div>
+         </div>
+         
+     <ul class="thumb">
+         <li><img src="assets/images/thumb1.png" onclick=" changeCircleColor('#3085a3'); "></li>
+         <li><a href="Service.html"><img src="assets/images/thumb3.png" onclick=" changeCircleColor('#017143'); "></a></li>
+         <li><a href="Service2.html"><img src="assets/images/thumb2.png" onclick=" changeCircleColor('#3336')"></a></li>
+     </ul>
+     <ul class="sci">
+         <li><a href=""><img src="assets/images/facebook.png"></a></li>
+         <li><a href=""><img src="assets/images/instagram.png"></a></li>
+         
+     </ul>
+    </section>
+
+ 
+
+    <script type="text/javascript">
+function imgSlider(anything){
+    document.querySelector('.starbucks').src = anything;
+
+}
+function changeCircleColor(color){
+    const circle = document.querySelector('.circle');
+    circle.style.background = color;
+}
+function toggleMenu(){
+    var menuToggle = document.querySelector('.toggle');
+    var navigation = document.querySelector('.navigation');
+    menuToggle.classList.toggle('active');
+    navigation.classList.toggle('active');
+
+}
+
+    
+    </script>
+   
+</body>
+</html>

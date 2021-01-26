@@ -10,10 +10,33 @@
 	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
 	<link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
 	<link href="assets/css/animate.css" rel="stylesheet">
+	<link href="assets/css/form.css" rel="stylesheet">
 	<link href="assets/css/style.css" rel="stylesheet" media="screen">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="assets/js/modernizr.custom.js"></script>
-       
+	<script>
+		/* When the user clicks on the button, 
+		toggle between hiding and showing the dropdown content */
+		function myFunction1() {
+			document.getElementById("myDropdown1").classList.toggle("show");
+			document.getElementById("Dropdown1").classList.toggle("show");
+		}
+		
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn1')) {
+		
+			var dropdowns = document.getElementsByClassName("dropdown-content1");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) {
+			  var openDropdown = dropdowns[i];
+			  if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			  }
+			}
+		  }
+		}
+		</script>
 </head>
 <body>
 	<div id="preloader">
@@ -58,8 +81,8 @@
 						<li><a href="#home">Home</a></li>
 						<li><a href="#services">Services</a></li>
                         <li><a href="#portfolio">Project</a></li>
-                        <li><a href="#skills">Skills</a></li>
-					
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="Service.html">About Site</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
@@ -161,7 +184,7 @@
 					SKILLS :<br>
 					EXPERIENCE:  </div>
 					<div class="grid_resume2 " >
-				 <span class="span1" >Business card site, site catalog, promo site, landing page, turnkey site and finalization of site functionality. <a href="#">Read more information</span></a>
+				 <span class="span1" >Business card site, site catalog, promo site, landing page, turnkey site and finalization of site functionality. <a href="#" class="href_resume">Read more information</span></a>
 
 				  <span class="span2"><div class="logo">
 					<div class="wrapper">   
@@ -391,7 +414,115 @@
 			</div>
 		
 	</section>
-	
+	<!-- CallToAction start -->
+
+	<section class="calltoaction1 " id="myDropdown1" >
+		<div class="container" >
+
+			<div class="row"  >
+				<div class="dropdown1" >
+					<p class="text_title ">Fill out the form with accurate information about your order, then I will contact you at the specified contacts in the form and we will discuss in detail the terms of reference, terms, payment terms and answer all your questions.</p>
+				<button onclick="myFunction1()" onclick="swa()" class="dropbtn1 " ><i class="fa fa-paper-plane" aria-hidden="true" style="padding-right: 20px;"></i>To order a site</button>
+				  <div id="Dropdown1" class="dropdown-content1" >
+					
+					<div class="it" >
+						<div class="container_form"  >
+							
+									
+							<form  id='item'>
+								<div id="overlay">
+								<div class="popup">
+											  <button class="close" title="Закрыть окно" onclick="swa2()"></button>
+											  <p class="zag">You are ready to place an order?</p>
+								<div class="Name_Email">
+								<div class="col1">
+								  <label for="fname">Your Name</label>
+								</div>
+								<div class="col2">
+								  <input type="text" id="fname" name="firstname" placeholder="Name">
+								</div>
+								
+							 
+								
+								<div class="email_form">
+								  <label for="lname">Email</label>
+								</div>
+								<div class="email_form1">
+									<input type="email" name="email" class="input" maxlength="30" placeholder="Email" />
+								</div>
+							</div>
+							<div class="country_tel">
+								<div class="country_form">
+								  <label for="country">Check Service</label>
+								</div>
+								<div class="country_form1" style="font-size: 10px;">
+								  <select id="country" name="country">
+									<option value="Landing" >Landing Page</option>
+									<option value="Catalog">Sait Catalog</option>
+									<option value="HTML">HTML Layout</option>
+									<option value="Business">business card website</option>
+								  </select>
+								</div>
+							
+							 
+								<div class="telephone_form">
+								  <label for="lname">Telephone</label>
+								</div>
+								<div class="telephone_form1">
+									<input type="tel" name="tel" class="input" maxlength="30"  placeholder="Number"/>
+								</div>
+							</div>
+							<p class="text_check">Term for development</p>
+							  <div class="check_but">
+								  
+								<label class="container12">Prompt
+									<input type="radio" checked="checked" name="radio">
+									<span class="checkmark"></span>
+								  </label>
+								  <label class="container12" style="margin-left: 30px; word-spacing: 0px;">Do not rush
+									<input type="radio" name="radio">
+									<span class="checkmark"></span>
+								  </label>
+							  </div>
+							  <div class="check_form2">
+							  <p class="text_check2">Do you have a technical task?</p>
+							  <div class="check_but2">
+								  
+								<label class="container222">Yes
+									<input type="radio" checked="checked" name="radio">
+									<span class="checkmark2"></span>
+								  </label>
+								  <label class="container222" style="margin-left: 50px;">No
+									<input type="radio" name="radio">
+									<span class="checkmark2"></span>
+								  </label>
+							  </div>
+							  </div>
+								<div class="message_form">
+								  <label for="subject">Project description, requirements, special wishes, budget</label>
+								</div>
+								<div class="message_form1">
+								  <textarea id="subject" name="subject" placeholder="Write text" ></textarea>
+								</div>
+							  
+							  
+								<input type="submit" class="submit_form" value="Submit">
+							  
+						
+								</div>
+							</div>
+							  
+						</form>
+					 </div>
+				</div>
+				</div>
+			
+				  </div>
+				</div>
+
+			</div>
+		</div>
+	</section>
     <section class="pfblock pfblock-gray" id="skills">
 		
 		<div class="container">
@@ -486,28 +617,8 @@ Administration of your website:</span> maintenance and administration of your we
 					
     <!-- Skills end -->
 
-	<!-- CallToAction start -->
-
-	<section class="calltoaction1">
-		<div class="container">
-
-			<div class="row">
-
-				<div class="col-md-12 col-lg-12">
-					<h2 class="wow slideInRight" data-wow-delay=".1s">ARE YOU READY TO START?</h2>
-					<div class="calltoaction-decription wow slideInRight" data-wow-delay=".2s">
-						I'm available for freelance projects.
-					</div>
-				</div>
-
-				<div class="col-md-12 col-lg-12 calltoaction-btn wow slideInRight" data-wow-delay=".3s">
-					<a href="#contact" class="btn btn-lg">Hire Me</a>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
+	
+	
 	<section id="contact" class="pfblock">
 		<div class="container">
 			<div class="row">
@@ -589,6 +700,7 @@ Administration of your website:</span> maintenance and administration of your we
 	<div class="scroll-up">
 		<a href="#home"><i class="fa fa-angle-up"></i></a>
 	</div>
+	
     <script>
 		/* When the user clicks on the button, 
 		toggle between hiding and showing the dropdown content */
@@ -612,12 +724,27 @@ Administration of your website:</span> maintenance and administration of your we
 		  }
 		}
 		</script>
+		   
     <!-- Scroll to top end-->
 
 	<!-- Javascript files -->
 <script>
 	
 </script>
+<script>
+	var b = document.getElementById('overlay');
+	function swa(){
+		b.style.visibility = 'visible';
+		b.style.opacity = '1';
+		b.style.transition = 'all 0.7s ease-out 0s';
+	}
+	function swa2(){
+		b.style.visibility = 'hidden';
+		b.style.opacity = '0';
+	}
+	</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.parallax-1.1.3.js"></script>
@@ -629,6 +756,9 @@ Administration of your website:</span> maintenance and administration of your we
     <script src="assets/js/waypoints.min.js"></script>
     <script src="assets/js/jquery.cbpQTRotator.js"></script>
 	<script src="assets/js/custom.js"></script>
+	<script src="assets/vendors/jquery/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/process-forms.js"></script>
+	<script src="assets/js/main.js"></script>
 
 </body>
 </html>

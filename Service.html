@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SAit</title>
+        <link rel="stylesheet" href="assets/css/css.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    </head>
+<body>
+    <section>
+        <div class="circle">
+        </div>
+        <header class="header">
+          
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul  class="navigation list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html/#portfolio">Portfolio</a></li>
+                <li><a href="index.html/#contact">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2 id='change'>Business card website, landing page<br></h2>
+        
+               
+                <p style="font-size: 18px;"  >A business card site is a small site, which includes several pages (no more than 20), which contain basic information about the company, the services provided and contacts of the organization. In short, this is an exclusively informational site that provides a minimum of information. Such a site is suitable for small newly opened companies, as well as for individuals who want to provide some information about themselves or their services on the Internet. Usually, a business card site has a fairly strict and neutral design, where the main priority is to convey information to a potential client</p>
+                
+                <a href="index.html/#contact">Drop me a line</a>
+            </div>
+                <div class="imgBox">
+                    <img src="assets/images/img1.png" class="starbucks">
+                </div>
+         </div>
+         
+     <ul class="thumb">
+         <li><a href="Service1.html"><img src="assets/images/thumb1.png" onclick=" changeCircleColor('#3085a3'); "></a></li>
+         <li><img src="assets/images/thumb3.png" onclick=" changeCircleColor('#017143'); "></li>
+         <li><a href="Service2.html"><img src="assets/images/thumb2.png" onclick=" changeCircleColor('#3336')"></a></li>
+     </ul>
+     <ul class="sci">
+         <li><a href=""><img src="assets/images/facebook.png"></a></li>
+         <li><a href=""><img src="assets/images/instagram.png"></a></li>
+         
+     </ul>
+    </section>
+
+
+    <script type="text/javascript">
+function imgSlider(anything){
+    document.querySelector('.starbucks').src = anything;
+
+}
+function changeCircleColor(color){
+    const circle = document.querySelector('.circle');
+    circle.style.background = color;
+}
+function toggleMenu(){
+    var menuToggle = document.querySelector('.toggle');
+    var navigation = document.querySelector('.navigation');
+    menuToggle.classList.toggle('active');
+    navigation.classList.toggle('active');
+
+}
+
+    
+    </script>
+   
+</body>
+</html>
