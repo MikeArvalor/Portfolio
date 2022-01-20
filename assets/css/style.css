@@ -742,6 +742,9 @@ background: url(../images/item-3.jpg);
 	.calltoaction {
 		text-align: center;
 	}
+	.row_block{
+		display: block !important;
+	}
 
 }
 
@@ -1097,6 +1100,19 @@ background: none;
 	
 
 	
+}
+@media (max-width:650px){
+	.text_horizontal1{
+		width: 350px;
+		
+		
+	}
+	#info1{
+		margin-left: 0px !important;
+	}
+	#info2{
+		margin-left: 0px !important;
+	}
 }
 @media screen and (max-width: 1100px) {
 	.dropdown-content{
@@ -2056,3 +2072,12 @@ margin-left: 350px;
 				border-radius: 25px;
 			}
 	
+			.row_block{
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-column-gap: 30px;
+			
+			}
+			.ylo{
+				
+			}
